@@ -1,0 +1,51 @@
+<!DOCTYPE html><!--html5 버전사용-->
+<html><!--html 코딩시작 lang ="ko"검색엔진으로 korean 한국어 사용-->
+<head><!--meta style title link script 작성하는 공간-->
+    <meta charset="utf-8">
+    <title>표를 이용해서 이미지 보여주기</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th,td{
+            border : 2px solid greenyellow;
+            text-align: center;
+            padding : 10px;
+        }
+        img {
+            width: 150px;
+        }
+   
+    </style>
+</head>
+<body>
+    <h2>귀염둥이 삼총사</h2>
+    <table>
+        <tr>
+            <th>사진</th>
+            <th>이름</th>
+            <th>나이</th>
+            <th>특징</th>
+        </tr>
+        <tr>
+            <td><img src="C:/Users/user1/frontend-workspace/html/이미지들/marley.jpg"/></td><!--절대경로-->
+            <td>말리</td>
+            <td>5살</td>
+            <td>안씹고 먹는다.<br> (이가 튼튼)</td>
+        </tr>
+        <tr>
+            <td><img src="이미지들/hogam.jpg"></td><!--상대경로-->
+            <td>호감</td>
+            <td>4살</td>
+            <td>식탐이 많음 <br>(몸이 튼튼)</td>
+        </tr>
+        <tr>
+            <td><img src="이미지들/healing.jpg"></td><!--상대경로-->
+            <td>힐링</td>
+            <td>대략 11살</td>
+            <td>잘 공격함 <br>(생존능력 우수)</td>
+        </tr>
+    </table>
+</body>
+
+</html><!--html 코딩종료-->
