@@ -1,0 +1,73 @@
+<!DOCTYPE html><!--html 5 버전   /  !Doctype html 이 없다면 하위 버전으로 변경됨-->
+<html lang="ko"><!--html 코딩 시작 태그 lang= 언어 설정 ko=한국어 en=영어-->
+    <head><!--s눈으로 보이지 않지만 html에 필요한 설정 meta title sytle link script-->
+        <meta charset="UTF-8">
+        <title>입력 관련 태그</title>
+
+    </head>
+    <body>
+        <h1>form 태그 / input 태그</h1>
+
+        <h3>form태그</h3>
+        <pre>
+            - 입력 양식을 작성하는 영역(공간)
+            - 내부에 작성된 입력 값을 지정된 공간으로 제출하는 역할
+
+            속성
+            1. action : 제출된 공간을 지정하는 속성(주소를 작성)
+            2. method(방법 / 방식) : 설정된 공간으로 데이터를 전달하는 방식
+            3. name : 자바스크립에서 사용 form 폼의 이름을 지정하는 속성
+            4. target : 제출된 페이지를 현재 또는 새 탭으로 열기 설정
+            5. 
+        </pre>
+        <h3>input 태그</h3>
+        <input>
+            - 웹 문서에서 사용자가 입력할 수 잇는 양식을 제공해주는 태그
+            - 많은 type이 존재하고, input의 변형 형태도 다양하게 존재
+            - name 속성이 99% 이상 필수로 작성되어야 함 
+                (작성해주어야 추후 개발할 때 용이)
+            name="변수명" 추후 개발에서 필요한 변수명을 작성해준 후 기능 연결
+            type 속성을 환경에 맞게 설정
+            type 종료
+                text : 한 줄 텍스트 입력 상자(기본값)
+                password : 비밀번호 입력 상자(모자이크 처리)
+                url : 주소 설정
+                search : 검색 기능
+                tel : telphone 전화번호
+                email : 모양은 text와 동일하나 이메일 작성 용도( @ At 작성했는지 확인   .  작성했는지 확인)
+                number : 숫자만 입력 가능한 상자
+                range : 슬라이드바를 이용해서 숫자 지정(단독사용x,js 같이 사용)
+                    - min(최소값) max(최대값) step(숫자가 증가/감소하는 단계) value(기본값 설정)
+                date, month, week, time, datetime-local : 날짜 관련 태그    
+            
+                input 태그의 경우 한 태그안에서 열고 닫지만<input> 
+                예외상황이 생길 경우 <input></input> 사용하기도 함
+
+                input은 무조건 form 태그 안에다가 작성해야하는 것은 아님
+                단독으로 사용할 수 있음
+
+                추후 id 라는 속성을 이용할 것
+
+                id = 자바스크립에서 사용할 변수명 label 과 연결해주는 기능
+                name = form 으로 내용을 제출할 때 사용
+                        name 안에 변수명을 작성할 때는 속성이다 예약어는 피해서 작성할 것
+                        name = id 작성하면 id 속성과 혼동이 올 수 있음
+                        name = user_id member_id id만 단독으로 사용하는 것은 방지
+        </pre>
+        <h3> 라벨 태그 </h3>
+        <pre>
+            label 태그는 input 태그의 앞 뒤에 위치하며 input에 관련된 설명을 제공하는데 사용
+            label 에서 name과 같은 for 속성의 이름을 사용
+            input 과 label 태그를 연결해줄 때
+            id 와 for 속성을 사용해서 연결
+        </pre>
+        <!--단축키 alt shift f-->
+        <form>
+            아이디 : <input type="text" name="user_id"><br>
+            비밀번호 : <input type="password" name="pw"><br>
+            이메일 : <input type="email" name="email"><br>
+            숫자 : <input type="number" name="num"><br>
+            <input type="range" min="10" max="100" step="1" value="50" name="ran"><br>
+        </form>
+    </body>
+</html>
