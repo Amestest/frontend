@@ -1,0 +1,44 @@
+<!DOCTYPE html> \
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>점심 메뉴 고르기</title>
+    <style>
+        body{
+            background-color: #f9f9f9;
+        }
+        .컨테이너{
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+        }
+        button{
+            background-color: yellowgreen;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="컨테이너">
+      <div class="헤더">
+        <h2>점심 메뉴 고르기</h2>
+      </div>
+      <div class="메인">
+        <select name="메뉴">
+            <option>한식</option>
+            <option>중식</option>
+            <option>양식</option>
+        </select>
+
+        <p>추가 작성 내용 : </p>
+        <textarea rows="4"></textarea>
+        <br>
+        <button>선택완료</button>
+      </div>
+    </div>
+  </body>
+</html>
