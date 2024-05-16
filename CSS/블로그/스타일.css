@@ -1,0 +1,92 @@
+@font-face {
+    font-family: '폰트지롱';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    }
+body {
+    font-family: '폰트지롱';
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.컨테이너{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.헤더 {
+    /*background-color : 단색 
+        background-image : 배경에 이미지를 삽입하는데 사용
+                            이미지 경로, 그라데이션 등 사용
+                            경로 -> background-image : url('이미지.이미지확장자');
+                            그라데이션 -> background-image : linear-gradient(방향, 색상1, 색상2, ...);
+                                                            radial-gradient(중심위치, 원모양크기,색상1,색상2,...);
+    */
+    background-image: linear-gradient(to right, #ff0080,#ff5580, #ffff80);
+}
+
+.네비게이션 {
+    background-image: radial-gradient(circle, #Eeaeca,#94bbe9);
+    text-align: center;
+    
+}
+/*
+ html 코딩 안에 있는 모든 a 태그의 스타일이 변경되지 않길 원할 때
+ 특정 영역 안에 있는 a 태그만 변경요청을 진행하면 됨
+
+
+ .클래스명 태그명{
+
+ }
+
+ 클래스명이 존재하지 않을 경우
+ 태그명 태그명 {
+
+ }
+
+<div class="네비게이션">
+                <ul>
+                    <li><a href="#">메인</a></li>
+                    <li><a href="#">주문하기</a></li>
+                </ul>
+            </div>
+
+div안에 작성해준 class이름인 네비게이션을 가장 먼저 가지고 온 후
+
+지정해서 변경할 태그 이름을 작성해줌
+
+만약에 네비게이션 안에 작성한 a 태그 글자를 변경하고 싶다면 아래처럼 작성
+구분자 띄어쓰기
+
+.네비게이션 a {
+
+}
+*/
+.네비게이션 a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline;
+}
+
+.특징{
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #d7d7d7;
+}
+.푸터{
+    background-color: #94bbe9;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}

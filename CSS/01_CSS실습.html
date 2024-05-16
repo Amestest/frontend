@@ -1,0 +1,62 @@
+<!DOCTYPE html><!--html 5 버전-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS 실습 적용하기</title>
+        <style>
+            /*css 주석*/
+            /* style 태그 css를 작성하기 위한 태그 */
+            /* 태그 선택자 */
+            h1 {
+                /*글자색 변경*/
+                color: red;
+
+            }
+            strong{
+                /*폰트 크기*/
+                /*숫자나 기본으로 설정된 값으로 변경하는데 기본 px 많이 사용*/
+                font-size: 18px; 
+
+                /*폰트 변경 - 기본으로 컴퓨터 안에 잇는 폰트 변경
+                    font face 의 경우 한 폰트만 지정해주기 때문에 사용X
+                    font-family의 경우 여러 폰트를 작성해준 다음
+                                만약 맨 앞에 작성한 폰트가 존재하지 않는다면
+                                두 번째 작성된 폰트 적용
+
+                    font-family:A,B,C 만약에 A폰트가 존재하지 않을 경우 B폰트 적용
+                                제일 먼저 적용되는 폰트는 A폰트
+                                영문 폰트 정의 '',"" 붙이지 않음
+                                영문 이외 폰트 정의 '',"" 사용해서 작성
+                <p> H E L L O </p> -> font-family : A, B, C
+                <p>    안녕   </P>  -> font-family : 'A','B','C'
+                <p>Hello 라고 하지만 나는 안녕이란다~!</p> -> font-family : A, 'a',B , 'b',C , 'c'
+                <p>Hello 라고 하지만 나는 안녕이란다~!</p> -> font-family : A, B ,C ,'a' ,'b' ,'c'
+                
+                font- family에서 폰트의 우선순위는 개발자가 결정
+                
+                font-face 사용 -> 외부에 있는 폰트 가져올 때
+
+                jsdeliver.com google폰트 사용
+                @font-face {
+                    font-family:'이름설정';
+                    src: url(주소입력) format(포맷입력);
+                    font-weight : 폰트 굵기 설정;
+                    font style : 스타일설정;
+                }
+                
+                */
+
+                font-family: '궁서체';
+            }
+            p {
+                font-size: 20px;
+                font-family: 'Franklin Gothic medium';
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS 적용하기</h1>
+        <strong>폰트 변경하기</strong>
+        <p>컴퓨터 안에 있는 기본 폰트</p>
+    </body>
+</html>

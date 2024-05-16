@@ -1,0 +1,28 @@
+h1{
+    color: yellowgreen;
+}
+.환영꾸미기{
+    color: red;
+}
+
+@font-face {
+    font-family: 'YClover-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    }
+    /* 폰트를 모든 태그에 적용하길 원한다면 * 작성해주거나
+        body 내에 모든 태그에 적용하길 원한다면 body 에 작성
+        
+        * {
+            font-family : '폰트지롱';
+        }
+        body {
+            font-family : '폰트지롱';
+        }
+        
+        
+        */
+    * {
+        font-family: 'YClover-Bold';
+    }
