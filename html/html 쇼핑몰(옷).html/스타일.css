@@ -1,0 +1,77 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6f6f6;
+  }
+  .헤더 {
+    background-color: #ff6b81;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  .네비게이션 {
+    background-color: #ff6b81;
+    /*위 여백 간격 조정 - 간격 줄어듬  + 간격 넓어짐*/
+    margin-top: -20px;
+    text-align: center;
+  }
+  .네비게이션 ul {
+    list-style-type: none;
+  }
+  .네비게이션 ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  .네비게이션 ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .메인 {
+    padding: 20px;
+    display: flex;
+  }
+  .제품사진 {
+    border: 1px solid black;
+    padding: 20px;
+    /* 태그 아래로 공백이 필요할 때 작성 */
+    margin-bottom: 20px;
+    /* 태그 오른쪽으로 공백이 필요할 때 작성*/
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 4px grey;
+  }
+
+  .제품사진 img {
+    width: 100%;
+    height: auto;
+  }
+  /*마우스를 버튼 위에 올리기 전 모습*/
+  .제품사진 button {
+    background-color: #4bcffa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    /*버튼 위에 마우스를 올렸을 때 마우스 아이콘 변경*/
+    cursor: pointer;
+  }
+  /*마우스를 버튼 위에 올린 후 모습*/
+  .제품사진 button:hover {
+    background-color: black;
+    color: white;
+  }
+  .푸터 {
+    background-color: #ff6b81;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+  .상세제품 {
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    padding: 50px;
+  }

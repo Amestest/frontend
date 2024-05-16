@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--head안에 들어가는 script body 안에 들어가는 script-->
+    <meta charset="UTF-8" />
+    <title>KH쇼핑몰</title>
+    <link rel="stylesheet" href="스타일.css">
+    <style>
+      /* 추후 link로 변경해서 이동할 코드 */
+      
+    </style>
+    <script>
+      function 버튼클릭() {
+        alert("상품이 장바구니에 추가되었습니다.");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="컨테이너">
+      <div class="헤더">
+        <h1>KH 쇼핑몰</h1>
+      </div>
+      <div class="네비게이션">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">제품</a></li>
+          <li><a href="#">장바구니</a></li>
+          <li><a href="#">로그인</a></li>
+        </ul>
+      </div>
+      <div class="메인">
+        <div class="제품사진">
+          <img src="이미지/상의.png" alt="제품 이미지" />
+          <h2>엘레강스 셔츠</h2>
+          <p>
+            상품 설명 : 독특한 텍스처와 조직감이 매력적인 텍스처 오픈 카라
+            티쳐스입니다.<br />
+            여유있는 릴렉스 핏에 어깨선이 드롭된 실루엣으로 다양한 스타일에
+            매치하기 좋은아이템입니다.
+          </p>
+          <p>$ 9,000</p>
+          <button onclick="버튼클릭()">장바구니에 추가</button>
+        </div>
+        <div class="제품사진">
+          <img src="이미지/여름상의.png" alt="제품 이미지" />
+          <h2>하와이안 포켓 셔츠</h2>
+          <p>
+            쾌적한 착용감의 릴렉스 하와이안 셔츠입니다.<br />베이직한 디자인과
+            여유 있는 핏으로 여름철 다양한 룩에 매치하기 좋습니다.<br />포켓은
+            내부 포켓으로 시크릿한 느낌을 제공합니다.
+          </p>
+
+          <p>
+            지금 할인 : $600<s style="color: red"
+              ><small style="color: red">$12,000</small></s
+            >
+          </p>
+          <button onclick="버튼클릭()">장바구니에 추가</button>
+        </div>
+        <div class="제품사진">
+          <img src="이미지/바지.png" alt="제품이미지" />
+          <h2>5부 써머 팬츠</h2>
+          <p>
+            고급스럽고 탄탄한 질감이 돋보이는 하프 팬츠<br />
+            무릎에 닿는 적당한 기장감으로 여름의 여유를 더했습니다.
+          </p>
+          <p>가격 : $70</p>
+          <button onclick="버튼클릭()">장바구니에 추가</button>
+        </div>
+        <div class="제품사진">
+          <img src="이미지/긴바지.png" alt="제품이미지" />
+          <h2>쿨링 딥 와이드핏 팬츠</h2>
+          <p>
+            남성 기능성 팬츠 쾌적한 착용감에 쿨링 딥 와이드 핏 팬츠<br />
+            허리의 엘라스틱 밴드와 뛰어난 신축성 소재로 활동성이 좋음<br />접촉냉감
+            기능을 검증받아 착용감이 쾌적하고 시원합니다.
+          </p>
+          <p>
+            지금할인 : $100<s style="color: red"
+              ><small style="color: red">$400</small></s
+            >
+          </p>
+          <a href="펜츠4.html">상세보기</a>
+          <button onclick="버튼클릭()">장바구니에 추가</button>
+        </div>
+      </div>
+      <div class="푸터">
+        <p>&copy; 2024 쇼핑몰</p>
+      </div>
+    </div>
+    <script>
+        // 스크립트 주석
+        // 장바구니 추가 버튼 클릭할 경우 알림창을 띄우는 함수
+        // 자바에서는 메서드를 작성할 때
+        // public void 버튼클릭(){                      ->  function 버튼클릭(){
+            //system.out.println("버튼이 클랙됐습니다.")      alert("상품이 추가되었습니다.")
+        // }                                                  }   
+      function 버튼클릭() {
+        alert("상품이 장바구니에 추가되었습니다.");
+      }
+    </script>
+  </body>
+</html>
