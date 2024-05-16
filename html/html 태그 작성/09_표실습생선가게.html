@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>   
+        <title>생선가게 표</title>
+            <meta charset="UTF-8">
+    <style>
+        th{
+            background-color: lightblue;
+        }
+        td{
+            background-color: lightgray;
+            /*글자 가운데 정렬*/
+            text-align:center;
+        }
+    </style>
+    </head>
+    <body>
+    <hr>
+    <h2>생선가게 주문 목록</h2>
+    <table border="1" style="width:100%; border-collapse:collapse;">
+        <tr>
+            <th rowspan="2">상품명</th>
+            <th rowspan="2">수량</th>
+            <th colspan="2">가격</th>
+            <th rowspan="2">구매일</th>
+        </tr>
+
+        <tr>
+            <!--상품명 수량을 작성해야하는데 칸 2칸 차지해서 작성을 하지 않아도 됨-->
+            <th>단가</th>
+            <th>총액</th>
+        </tr>
+        <tr>
+            <td>고등어</td>
+            <td>3</td>
+            <td>10,000원</td>
+            <td>30,000원</td>
+            <td>2024-05-10</td>
+        </tr>
+        <tr>
+            <td>연어</td>
+            <td>2</td>
+            <td>15,000원</td>
+            <td>30,000원</td>
+            <td>2024-05-11</td>
+        </tr>
+        <tr>
+            <td colspan="2">총합</td>
+            <td>25,000원</td>
+            <td>60,000원</td>
+            <td>---</td>
+        </tr>
+    </table>
+
+</body>
+
+
+</html>

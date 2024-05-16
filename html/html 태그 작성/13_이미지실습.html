@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UFT-8">
+        <title>과일 나라</title>
+    <style>
+        /*style 안에 img 작성 후 {} 안에 적용하고 싶은 느낌을 작성해 주면
+            html 안에 있는 모든 img 태그에 스타일이 적용됨
+            padding : 공간을 확보 위 아래 오른쪽 왼쪽으로 동일하게 공간을 확보
+            border : 테두리에 관련된 설정을 해주는 것
+                테두리 사이즈 : 1px 얇은 선으로 그려주는것
+                                테두리사이즈 숫자가 커질수록 테두리사이즈도 커짐 
+            solid : 일반적으로 라인을 그려주는 테두리
+                생상 : 테두리 색상지정
+
+            style에는 똑같은 태그를 여러번 불러와서 설정할 수 있음
+            ,를 이용해서 작성할 때는 동일한 속성을 작성해줄 때 사용
+            ,를 이용하지 않고 작성할 때는 단독으로 태그가 스타일을 갖길 원할 때 사용
+            */
+        th,td{
+            border : 1px solid violet;
+            text-align: center;
+            padding: 10px
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th{
+            background-color: violet;
+            color: white;
+        }
+        img {
+            width: 100px;
+        }
+    </style>
+    
+    </head>
+    <body>
+        <h2>과일 가격표</h2>
+        <table>
+            <tr>
+                <th>과일</th>
+                <th>가격</th>
+                <th>이미지</th>
+            </tr>
+            <tr>
+                <td>사과</td>
+                <td>1,000원</td>
+                <td><img src="https://cdn.pixabay.com/photo/2016/09/20/07/25/food-1681977_1280.png" alt="사과"/></td><!--주소-->
+            </tr>
+            <tr>
+                <td>바나나</td>
+                <td>800원</td>
+                <td><img src="C:\Users\user1\frontend-workspace\html\이미지들\바나나.jpg" alt="바나나"/></td><!--절대경로-->
+            </tr>
+            <tr>
+                <td>딸기</td>
+                <td>1,500원</td>
+                <td><img src="../이미지들/딸기.jpg" alt="딸기"/></td><!--상대경로-->
+            </tr>
+        </table>
+
+    </body>
+</html>

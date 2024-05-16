@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>동영상 게시판</title>
+    <style>
+      image {
+        width: 50%;
+        height: 50%;
+      }
+      .icon {
+        width: 50px;
+        height: 50px;
+      }
+      body {
+        margin: 0 auto;
+        background-color: aliceblue;
+      }
+      .컨테이너 {
+        background-color: white;
+      }
+      video {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        border-radius: 10px;
+      }
+      .댓글들 {
+        text-align: center;
+        padding: 10px;
+      }
+      .댓글 {
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: aliceblues;
+        text-align: center;
+        color: blue;
+        padding: 20px;
+      }
+      a {
+        text-align: center;
+        margin: 0 auto;
+      }
+      .버튼꾸미기{
+        display: block;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="컨테이너">
+      <h1>동영상 게시판</h1>
+      <!--동영상 상대경로로 1개 올리기
+            동영상 절대경로로 1개 올리기-->
+
+      <video autoplay muted loop>
+        <source src="../비디오들/오로라.mp4" type="video/mp4" />
+      </video>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/n9yXBQIzO2w?si=C1E3XKEOMHn24GQa"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <br />
+      <div class ="버튼꾸미기">
+        <a href="홈페이지메인.html"
+          ><img class="icon" src="메인아이콘.png"
+        /></a>
+        <a href="홈페이지게시판.html"
+          ><img class="icon" src="게시판아이콘.png"
+        /></a>
+      </div>
+    </div>
+    <div class="댓글들">
+      <h2>댓글들</h2>
+      <div class="댓글">
+        <p>사용자1</p>
+        <p>오로라가 예쁘네요</p>
+      </div>
+      <br>
+      <div class="댓글">
+        <p>사용자2</p>
+        <p>직접 보고싶어요</p>
+      </div>
+      <div class="댓글">
+        <input type="text" placeholder="이름을 입력하세요" />
+        <input type="text" placeholder="내용을 입력하세요" />
+      </div>
+    </div>
+  </body>
+</html>
