@@ -1,0 +1,113 @@
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header,
+  footer {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 20px;
+  }
+  nav {
+    background-color: aliceblue;
+    padding: 15px;
+    text-align: center;
+  }
+  nav a {
+    text-decoration: none;
+    color: black;
+  }
+  main {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .소개클래스 {
+    /*한 section이 끝날 때 마다 엔터 처리*/
+    display: block;
+    /*한 section이 끝날 때마다 밑으로 간격을 20px 준 것*/
+    margin-bottom: 20px;
+  }
+  .소개클래스 .블록 {
+    background-color: #f2f2f2f2;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .소개클래스 .블록 img {
+    width: 200px;
+    height: 200px;
+  }
+  /*.소개클래스 .블록:first-child{
+    background-color: lightpink;
+ }
+  .소개클래스 .블록:last-child{
+    background-color: lightcyan;
+  } */
+  /* 팀원 소개 섹션*/
+  .팀클래스 {
+    /*가로 중앙 정렬을 위한 스타일 추가*/
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .팀클래스 .멤버 {
+    /*세로로 나눠져 있는 div를 가로로 배치*/
+    display: inline-block;
+    /*display에서 inline만 사용할 경우
+    가로 길이 설정 불가능
+    display에서 inline-block 을 사용할 경우
+    가로 길이 설정 가능*/
+    width: 20%;
+    padding: 15px;
+    background-color: rgb(232, 232, 255);
+    border: 2px solid #f2f2f2f2;
+  }
+  /*
+  .팀클래스 .멤버 1번째 멤버
+  배경색 darkslategray
+  .팀클래스 .멤버 2번째 멤버
+  배경색 lightpink
+  .팀클래스 .멤버 3번째 멤버
+  배경색 lightblue
+  .팀클래스 .멤버 4번째 멤버
+  배경색 lightgreen
+  */
+  /* 팀클래스 기준으로 h2 또한 자식이기 때문에 h2 팀소개가 1번째가 됨*/
+  .팀클래스 .멤버:nth-child(2) {
+    background-color: rgb(107, 177, 177);
+  }
+  .팀클래스 .멤버:nth-child(3) {
+    background-color: lightcoral;
+  }
+  .팀클래스 .멤버:nth-child(4) {
+    background-color: lightblue;
+  }
+  .팀클래스 .멤버:nth-child(5) {
+    background-color: rgb(112, 216, 63);
+  }
+  /* : hover 어디든 맨 뒤에 붙이면 마우스가 태긍나에 도착한 다음 나올 스타일
+    모든 숫자에 동일한 디자인을 적용하길 원한다면 n */
+  .팀클래스 .멤버:nth-child(n):hover {
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold; /* 폰트 굵기 작용*/
+    text-shadow: 3px 4px 15px white;
+    /*box-shadow: 0 0 15px white; 여기서는 테두리가 없기 때문에 사용 불가*/
+  }
+
+  /* 팀 클래스 밑에 있는 멤버 멤버 밑에 있는 img*/
+  .팀클래스 .멤버 img {
+    width: 100px;
+    border-radius: 50%;
+  }
+  .픽스된지역 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgb(27, 145, 42);
+  }
