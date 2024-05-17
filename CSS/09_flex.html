@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>flex</title>
+  </head>
+  <body>
+    <h1>display : flex</h1>
+    <pre>
+        태그에 정렬되는 방향, 순서 태그간의 간격을
+        하나하나 수치적으로 처리하지 않아도
+        알아서 유연하게 처리해주는 방식
+
+        display : flex
+        - 감싸는 태그를 flex 형식으로 변경
+            -> 내부에 작성되는 태그를 유연하게 배치하겠다는 의미
+                내부에 있는 태그가 가진 margin 속성을 없앰
+    </pre>
+    <style>
+        .플렉스컨테이너 {
+            height: 700px;
+            background-color: #f2f2f2;
+
+            display: flex;
+        }
+        .아이템들 {
+            width: 75px;
+            height: 75px;
+        }
+        .아이템1 {
+            background-color: red;
+        }
+        .아이템2 {
+            background-color: orange;
+        }
+    </style>
+    <div class="플렉스컨테이너">
+        <div class="아이템들 아이템1">1번 아이템</div>
+        <div class="아이템들 아이템2">2번 아이템</div>
+        <div class="아이템들 아이템1">1번 아이템</div>
+        <div class="아이템들 아이템2">2번 아이템</div>
+
+    </div>
+  </body>
+</html>
