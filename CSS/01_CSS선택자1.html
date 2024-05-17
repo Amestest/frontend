@@ -4,14 +4,104 @@
         <meta charset="UTF-8">
         <title>CSS 선택자1</title>
     </head>
-    <body>
-        <h1></h1>
+    <body><!--html 코딩-->
+        <h1>CSS(Cascading Style Sheets)</h1>
         <pre>
+            마크업 언어(html)가 실제로 화면에 표시되는 방법을 기술하는 언어
+            (모양, 색상, 크기, 배경이미지, 움직임, ...)
+
+            하나의 태그에 여러 css 코드를 겹쳐서 원하는 스타일을 만들어냄
+
+            W3C에서 CSS를 표준 스타일로 지정
             Style 태그는 head 안에 작성해도 되고,
                         body 안에 작성해도 됨
                         head와 body 사이에 존재하지 않아도 됨
                         head 안에 작성해주는 것이 암묵적인 룰이며
                              추후 수정하거나 추가 작업을 진행할 때 사용
         </pre>
+        <hr><hr>
+        <h1>CSS선택자(CSS selector)</h1>
+        <pre>
+            CSS 로 꾸미기 설정을 진행할 때는 5가지 방법이 존재--
+
+            1. 태그 옆에 style="원하는 스타일 작성"
+                    <p style="font-size: large;">안녕하세요.</p>
+
+            2. head 태그 안에 style 태그를 작성해서 스타일 적용
+                [1] : 태그 이름을 작성한 후 스타일 적용
+                    <style>
+                        p {
+                            font-size:large;
+                        }
+                    </style>
+                [2] : 태그 옆에 class="변수명" 설정한 다음 style 태그 안에 변수명을
+                      작성 해준 후 스타일 적용
+                      단, class="변수명"으로 표기할 경우 style 태그 안에 .변수명{} 으로
+                      필히 . 표기
+                      <style>
+                        #변수명 {
+                            color:yellowgreen;
+                        }
+                      </style> 
+                      <p id="변수명">반갑습니다.</p>
+                [3] : 태그 옆에 id="변수명" 설정한 다음 style 태그 안에 변수명을
+                      작성 해준 후 스타일 적용
+                      단, id="변수명"으로 표기할 경우 style 태그 안에 #변수명{ }으로
+                      필히 # 표기
+                      <style>
+                        #변수명 {
+                            color:tomato;
+                        }
+                      </style>
+                      <p id="변수명">환영합니다.</p>
+
+                [2(class)와 3(id)차이점]
+                      style 에 관련된 코드를 작성할 때는 class 안에 변수명을 작성해주는 것이 좋음
+                      javascript 에 관련된 코드를 작성할 때는 id 안에 변수명을 작성해주는 것이 좋음
+
+                      class의 경우 여러 태그 같은 스타일을 적용할 때 유용
+                            id보다 우선순위가 낮음
+
+                      id의 경우 특정한 기능을 갖니 태그에 유일한 스타일을 적용할 때 유용
+                            특별하게 스타일을 가져야 하는 경우 사용하기 때문에
+                            우선순위는 1번
+                      
+                      <style>
+                        .클래스스타일{
+                            color:blue;
+                        }
+                        #아이디스타일 {
+                            color:red;
+                        }
+                      </style>
+                      <p class="클래스스타일" id="아이디스타일">과연 둘 중 더 강한 것은!!!</p>
+
+                [4] : 태그에 작성된 특정 속성을 사용해 선택하는 선택자
+                      input[name] : input 태그 안에 존재하는 모든 name 속성 값에 공통 설정
+                      위와 같이 작성할 경우 맨 마지막에 작성된 디자인이 적용
+
+                      만약에 같은 속성(=name) 에서 name="변수명" 특별한 디자인을 작성하길 원한다면
+                      input[name="변수명"]{} 작성해준 후 디자인 적용
+
+                <style>
+                    input[name]{
+                        background-color: aqua;
+                    }
+                    input[name="이름-1"]{
+                        background-color: violet;
+                    }
+                </style>
+                <input name="이름-1" type="text">
+                <input name="이름-2" type="text">
+            3. .css 형식 파일을 사용해서 .css 파일 안에 css 코딩 작성
+                head 태그 안에 style 태그 대신 link태그를 사용해서 작성
+                link 태그 : 외부 css 파일과 연결하는 태그( css 파일이외 여러가지 다수 연결 가능)
+                    rel(relationship) : 연결하려는 파일의 어떤 종류인지?
+                    href(hyper reference) : 참조하려는 파일의 위치(주소, 경로 등)
+
+                    html 안에서 코드가 너무 길어짐
+                    중복되는 코드 하나의 파일에 작성 후 여러 파일에서 할 수 있음
+                    
+        </pre>
     </body>
-</html>
+</html><!--html 코딩 종료하는 태그-->
