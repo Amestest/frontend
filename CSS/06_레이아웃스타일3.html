@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>레이아웃 스타일 3</title>
+  </head>
+  <body>
+    <h1>정렬을 도와주는 float clear</h1>
+    <pre>
+            float : 뜨다
+                태그를 띄워서 좌/우 정렬하는 속성
+
+                float을 지정하지 않은 태그와 지정된 태그가 겹치는 문제 발생
+            clear : float으로 인해 띄워져 있는 상태를 해제하는 속성
+                태그 겹침 문제를 해결
+        </pre
+    >
+    <h3>float/clear (좌 왼쪽 left)</h3>
+    <style>
+      div {
+        border: 1px solid black;
+      }
+      .박스모양 {
+        width: 300px;
+        height: 200px;
+        background-color: aliceblue;
+      }
+      .왼쪽띄우기 {
+        width: 50px;
+        height: 50px;
+        background-color: pink;
+        /*모두 왼쪽으로 정렬
+                float을 사용할 경우 
+                div 태그에 존재하는 block 성질 지워버림
+                block : 가로로 한 줄 전체 차지
+                */
+        float: left;
+      }
+      .왼쪽상태해제 {
+        clear: left;
+      }
+    </style>
+    <div class="박스모양">
+      <div class="왼쪽띄우기">1</div>
+      <div class="왼쪽띄우기">2</div>
+      <div class="왼쪽띄우기">3</div>
+      <div class="왼쪽띄우기">4</div>
+      <div>안녕~~~하세요!!!!</div>
+      <div class="왼쪽상태해제">반</div>
+      <div class="왼쪽띄우기">갑</div>
+      <div class="왼쪽띄우기">습</div>
+      <div class="왼쪽띄우기">니</div>
+      <div class="왼쪽띄우기">다</div>
+    </div>
+    <style>
+      .오른쪽정렬 {
+        width: 30px;
+        height: 30px;
+        background-color: yellow;
+        float: right;
+      }
+    </style>
+    <div class="박스모양">
+      <div class="오른쪽정렬">1</div>
+      <div class="오른쪽정렬">2</div>
+      <div class="오른쪽정렬">3</div>
+    </div>
+  </body>
+</html>
