@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>선택자 우선순위</title>
+        <style>
+        /*추후 link로 변경예정*/
+        body {
+            background-color: green !important;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>CSS 선택자 우선순위</h1>
+        <pre>
+            기본적으로 css 속성dms style 태그 또는 css 파일에
+            작성된 순서(위->아래) 로 해석이 진행 되지만
+
+            같은 요소에 따라 여러 css 속성이 설정되는 경우 우선 순위 적용
+
+            1) 동일한 우선 순위로 css 속성이 설정된 경우
+                -> 제일 마지막에 작성된 css 속성이 반영
+            2) 여러 선택자를 이용해서 같은 요소를 선택하더라도
+            지정되는 css 속성이 다르면 모두 반영
+
+            1순위 : css 속성 속성값 !important;
+                background-color: green !important;
+            2순위 : 태그 옆에 작성된 style
+                <p style="color: red;">주의</p>
+            3순위 : 아이디 선택자 #아이디 속성명
+            4순위 : 클래스 선택자 .class 속성명
+            5순위 : 기본태그선택 태그 속성명
+        </pre>
+    </body>
+</html>

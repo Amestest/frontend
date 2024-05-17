@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>레이아웃 스타일</title>
+    </head>
+    <body>
+        <h1>레이아웃(layout)</h1>
+        <p>사용 목적을 기반으로 시각적 효과를 구성하는 행위<br>
+            사전적 의미 : 배치, 정리
+            기술적 의미 : 구성 요소를 제한된 공간에 효율적으로 배치하는 것
+
+        </p>
+        <hr>
+        <h3>display : 화면 표시나 형식에 대한 배치 지정</h3>
+        <pre>
+            태그가 화면에 어떻게 보여질지 형식을 지정하는 속성
+
+            - block : 화면을 수직 분할(한 줄 다 차지)
+                    +가로(width), 세로(height) 지정 가능
+            
+            - inline : 화면을 수평 분할(디자인을 글자, 문자열 취급)
+                    +가로(width), 세로(height) 지정 불가능
+            
+            - inline-block : inline 처럼 수평 분할은 가능하되 block처럼 가로 세로 지정 가능
+                    +가로(width), 세로(height) 지정 가능
+            
+            - none : 태그가 존재하지만 숨김 화면에는 보이지 않게 함
+
+            - flex : 태그 간의 간격을 유연하게 처리하는 방식 
+                     태그의 정렬 방향 또한 유연하게 처리하는 방식
+
+            - grid : # 격자 무늬 형식으로 화면을 쉽게 분할하는 형식
+        </pre>
+        <hr>
+        <h3>block 형식 요소를 inline 형식으로 변경</h3>
+        <style>
+            .블록 {
+                /*border : 선 그리기 (선을 지우거나 선을 그릴수 있음*/
+                border: 1px dotted black;
+                width: 150px;
+                height: 150px;
+                color: white;
+                display: block;
+            }
+            .영역1 {
+                /* 배경색 : red*/
+                background-color: red;
+            }
+            .인라인 {
+                display: inline;
+            }
+            .영역2 {
+                background-color: orange;
+                color: black;
+            }
+        </style>
+        <div class="블록 영역1 인라인">1번 영역</div>
+        <div class="블록 영역2 인라인">2번 영역</div>
+
+        <h3>inline-block, none 확인하기</h3>
+        <pre>
+            - inline, inline-block 은 String과 같은 글자형식으로 생각하는 것이 좋음
+            - html에서 글/태그 사이 띄어쓰기, 엔터는 모두 띄어쓰기 한 칸으로 인식
+
+            - inline-block 형식의 태그가 아래처럼 줄이 바뀐 상태로 작성되어지면
+            태그 사이에 띄어쓰기 한 칸이 추가됨
+        </pre>
+        <style>
+            .인라인블록 {
+                display: inline-block;
+            }
+            .영역3 {
+                background-color: green;
+            }
+            .히든 {
+                /*눈에 보이진 않지만 영역은 유지
+                visibility : 요소를 보이게 / 투명하게 만드는 속성
+                -> 투명하게 만들어도 태그(요소) 크기 만큼의 공간은 계속 차지하고 있음
+                */
+                visibility: hidden;
+            }
+            .영역4 {
+                background-color: blue;
+            }
+            .영역5 {
+                background-color: brown;
+            }
+            /* 해당 태그의 영역이 안보이게 되면 영역의 공간 또한 사라지게 됨
+                사용자에게 존재 자체를 드러내지 않기 위해 사용*/
+            .논 {
+                display: none;
+            }
+            .영역6 {
+                background-color: purple;
+            }
+        </style>
+        <span class="블록 영역1 인라인블록">1번 영역</span>
+        <!--엔터를 쳐서 span 태그 줄 바꿈을 해주면 1번 영역과 2번 영역 사이에는 띄어쓰기가 존재-->
+        <span class="블록 영역2 인라인블록">2번 영역</span>
+        <span class="블록 영역3 인라인블록 히든">3번 영역</span>
+        <span class="블록 영역4 인라인블록">4번 영역</span>
+        <span class="블록 영역5 인라인블록 논">5번 영역</span>
+        <span class="블록 영역6 인라인블록">6번 영역</span>
+
+        <hr><hr>
+        <h3>화면 영역 분할 영역</h3>
+        <h4>상하로 2 분할 하기</h4>
+        <style>
+            .컨테이너 {
+                border: 3px solid black;
+                width: 470px;
+                height: 470px;
+            }
+            /* 컨테이너 밑에 div가 존재한다는 표시
+                컨테이너에서 설정한 470 크기 안에서
+                100% 하거나 50%를 유지하라는 의미
+                자식 css*/
+            .컨테이너 > div {
+                width: 100%;
+                height: 50%;
+            }
+
+            .컨테이너 > div:first-child {
+                background-color: lightpink;
+            }
+            .컨테이너 > div:last-child {
+                background-color: darkslategray;
+            }
+        </style>
+        <div class ="컨테이너">
+            <div></div>
+            <div></div>
+        </div>
+        <h2>상하 3분할</h2>
+        <pre>
+            조건 : 지식
+            - 20 : 30 : 50 비율
+            - 배경색 : orange yellow green
+            - 이외 필요한 속성 자유롭게 추가
+        </pre>
+        <style>
+            #태그2 > div:nth-child(1){
+                height: 20%;
+                background-color: orange;
+            }
+            #태그2 > div:nth-child(2){
+                height: 30%;
+                background-color: yellow;
+            }
+            #태그2 > div:nth-child(3){
+                height: 50%;
+                background-color: green;
+            }
+        </style>
+        <div class ="컨테이너" id="태그2">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>
