@@ -19,13 +19,87 @@
         <hr>
         <h3>border(테두리) 영역</h3>
         <style>
+            .박스{
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+            }
             .보더 {
                 border: 1px /* 선의 두께 숫자가 높아질수록 두꺼워짐*/ 
                         solid 
+                        /*선 표현 선을 어떻게 그릴 것인지 작성
+                            none 테두리 표시 x
+                            dotted 테두리를 둥근 점으로 여러개 그림 점 간격 지정 x
+                            dashed 테두리를 직사각형으로 여러개 그림 크기 길이 지정 x
+                            solid 테두리를 하나의 직선으로 그림
+                            double 테두리를 두 개의 평행한 직선 그림
+                            groove 테두리가 파인 것 처럼 그려짐
+                            ridge 테두리가 튀어나온 것 처럼 그려짐
+                            inset 태그가 파인 것 처럼 그려짐
+                            outset 태그가 튀어나온 것 처럼 그려짐
+                        */
                         black;
-                
+            }
+            .패딩 {
+                width: 200px;
+                height: 200px;
+                border: 2px solid black;
+                padding: 20px;
             }
         </style>
         <div class="보더">내용</div>
+        <div class="박스 패딩">내용</div>
+        <style>
+            .마진 {
+                /*상 하 좌 우 20px 만큼 다른 태그와 간격 설정*/
+                margin: 20px;
+            }
+        </style>
+        <div class="박스 마진">마진 내용</div>
+        <h3>padding margin border 방향성</h3>
+        <pre>
+            000 - padding , margin , border 를 나타냄
+
+            000-top : 크기 -> 위쪽 방향 크기 지정
+            000-bottom : 크기 -> 아래쪽 방향 크기 지정
+            000-left : 크기 -> 왼쪽 방향 크기 지정
+            000-right : 크기 -> 오른쪽 방향 크기 지정
+
+            단 border(선) 속성값은 [크기 모양 색상] 형식
+            예를 들어
+            오른쪽 선은 도트모양으로 10px 빨간색 줬으면 좋겠음
+            border-right : 10px dotted red
+        </pre>
+
+        <h3><mark> padding, margin,</mark>border-width 크기 한 번에 지정</h3>
+    <pre>
+        padding | margin | border-width : 속성 값 크기 설정
+        속성 값 1개 : 상하좌우
+        padding : 20px /*상하좌우로 20px 주라는 의미*/
+        margin : 20px /*상하좌우로 20px 주라는 의미*/
+    
+        속성 값 2개 :  상하 좌우      
+        padding : 20px 10px 상하20px 좌우 10px 
+        margin : 20px 10px  상하20px 좌우 10px 
+
+        속성 값 3개 :  상 좌우 하       
+        padding : 20px 10px 30px 상 20px 좌우 10px 하 30px
+        margin : 20px 10px 30px 상 20px 좌우 10px 하 30px
+
+        속성 값 4개 : 상 우 하 좌 (시계 방향)    
+        padding : 10px 20px 30px 40px 상 10px 우 20px 하 30px 좌 40px
+        margin : 10px 20px 30px 40px 상 10px 우 20px 하 30px 좌 40px
+        
+    </pre>
+
+    <h3>margin : 0 auto;</h3>
+    <pre>
+        다른 태그와의 간격을 자동으로 지정해서 가운데 정렬하게 만드는 속성 값
+
+        기본적으로 자동 정렬 (= 가운데 정렬)
+        display : block 값에서 자주사용
+
+        inline , inline-block 은 text-align : center; 이용
+    </pre>
     </body>
 </html>
