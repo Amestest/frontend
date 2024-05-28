@@ -1,41 +1,80 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>회원가입</title>
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    </head>
-    <body>
-        <form action="30_회원가입결과보기.html" method="get" autocomplete="off">
-            <label> 이름 :</label>
-            <input type="text" name="signName">
-            <br>
-            <label>나이 : </label>
-            <input type="number" name="signAge">
-            <br>
-            <label>아이디 : </label>
-            <input type="text" name="signId">
-            <br>
-            <label>비밀번호 : </label>
-            <input type="password" id="pw1"><!--회원가입 후 비밀번호는 유출되면 안되기 대문에 누으로 보게 끔 전달 x-->
-            <br>
-            <label>비밀번호 확인 : </label>
-            <input type="password" id="pw2">
-            <button type="submit" onclick="회원가입버튼(event)">회원가입완료</button>
-        </form>
-        <script>
-            function 회원가입버튼(){
-                const pw1 = $('#pw1').val(); //비밀번호 1 작성한 값 가져오기
-                const pw2 = $('#pw2').val(); //비밀번호 2 작성한 값 가져오기
+  <head>
+    <meta charset="utf-8" />
+    <title>회원가입</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!--style에 작성한 css를 30_회원가입.css로 코드 옮겨준 후 link로 스타일 가져오기-->
+    <link rel="stylesheet" href="30_회원가입.css" />
+  </head>
+  <body>
+    <form action="30_회원가입결과보기.html" method="get" autocomplete="off">
+      <label> 이름 :</label>
+      <input type="text" name="signName" />
+      <br />
+      <label>나이 : </label>
+      <input type="number" name="signAge" />
+      <br />
+      <!--성별-->
+      <style>
+        .gender-option{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .gender-option input {
+            margin: 0 5px 0 0;
+        }
+        .gender-option label {
+            margin-right: 60px;
+            margin-left: -70px;
+        }
+      </style>
+      <label>성별 : </label>
+      <div class="gender-option">
+        <input type="radio" name="signGender" value="남자" id="m" />
+        <label for="m">남</label>
+        <input type="radio" name="signGender" value="여자" id="f" />
+        <label for="f">여</label>
+      </div>
 
-                //만약에 pw1과 pw2가 일치하지 않는다면
-                if(pw1 !== pw2) {
-                    alert('비밀번호가 일치하지 않습니다.');
-                    // 비밀번호가 일치하지 않는다는 문구만 보여진 상태에서
-                    // 비밀번호가 일치하지 않더라도 회원가입 완료로 값이 넘어감
-                    event.preventDefault(); //form 제출을 막아버리는 이벤트
-                } 
-            }
-        </script>
-    </body>
+      <label>취미 : </label>
+      <div class="hobby-option">
+        <input type="checkbox" name="signHobby" value="독서" id="hobby1">
+        <label for="hobby1">독서</label>  
+        <input type="checkbox" name="signHobby" value="운동" id="hobby2">
+        <label for="hobby2">운동</label>  
+        <input type="checkbox" name="signHobby" value="여행" id="hobby3">
+        <label for="hobby3">여행</label>  
+
+      </div>
+
+      <label>아이디 : </label>
+      <input type="text" name="signId" />
+      <br />
+      <label>비밀번호 : </label>
+      <input
+        type="password"
+        id="pw1"
+      /><!--회원가입 후 비밀번호는 유출되면 안되기 대문에 누으로 보게 끔 전달 x-->
+      <br />
+      <label>비밀번호 확인 : </label>
+      <input type="password" id="pw2" />
+      <button type="submit" onclick="회원가입버튼(event)">회원가입완료</button>
+    </form>
+    <script>
+      function 회원가입버튼() {
+        const pw1 = $("#pw1").val(); //비밀번호 1 작성한 값 가져오기
+        const pw2 = $("#pw2").val(); //비밀번호 2 작성한 값 가져오기
+
+        //만약에 pw1과 pw2가 일치하지 않는다면
+        if (pw1 !== pw2) {
+          alert("비밀번호가 일치하지 않습니다.");
+          // 비밀번호가 일치하지 않는다는 문구만 보여진 상태에서
+          // 비밀번호가 일치하지 않더라도 회원가입 완료로 값이 넘어감
+          event.preventDefault(); //form 제출을 막아버리는 이벤트
+        }
+      }
+    </script>
+  </body>
 </html>

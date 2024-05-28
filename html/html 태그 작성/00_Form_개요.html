@@ -89,10 +89,7 @@
         <div>
             <h1>폼 결과</h1>
             <p>이름 : <span id="resultName"><!--추후 보여질 결과 이름--></span></p>
-           
-        </div>
-    </body>
-    <script>
+            <script>
                 $(document).ready(function(){
                     const url이름값가져오기 = new URLSearchParams(window.location.search);
                     const 가져온이름 = url이름값가져오기.get("userName");
@@ -104,4 +101,6 @@
                     */
                 })
             </script>
+        </div>
+    </body>
 </html>
