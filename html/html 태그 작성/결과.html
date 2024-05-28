@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>폼 결과</title>
+        <!--제이쿼리 CDN가져오기-->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <h1>폼 결과</h1>
+        <p>이름 : <span id="이름결과"></span></p>
+        <script>
+            $(document).ready(function(){
+                //URL 파라미터에서 이름 값을 가져와서 표시
+                const url이름값가져오기 = new URLSearchParams(window.location.search);
+                const 이름값 = url이름값가져오기.get('');
+                $('#이름결과').text(이름값);
+            })
+        </script>
+    </body>
+</html>
