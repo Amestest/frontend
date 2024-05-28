@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>로그인 결과 확인하기</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>로그인성공</h1>
+            <p>환영합니다.<span id="loginUser"> </span> 님!</p>
+        </div>
+        <script>
+           $(document).ready(function(){
+            //LocalStorage에서 로그인 한 사용자 아이디 가져오기
+            const id = localStorage.getItem('signId');
+            $("#loginUser").text(id);
+           })
+        </script>
+    </body>
+</html>
